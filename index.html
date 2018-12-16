@@ -19,76 +19,48 @@
         {
             color: black;
         }
-        .row {
-            padding: 5px;
-        }
-        .row:after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-        .col {
-            padding: 5px;
-            float: left;
+        
+        #about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
-        #skils > ul > li,
-        #experience > ul > li,
-        #projects > ul > li
-        {
+        .row-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .col-flex {
             float: left;
             background-color: #f1f1f1;
-            padding: 5px;
+            padding: 10px 20px;
             margin: 5px;
-            font-weight: bold;
         }
 
-        #skils > ul > li > ul,
-        #experience > ul > li > ul,
-        #projects p
-        {            
-            font-weight: normal;
-        }
-
-        #skils > ul > li {
-            min-height: 170px;
+        #flex-skils .col-flex {
             min-width: 100px;
         }
 
-        #experience > ul > li {
-            min-width: 360px;
-            min-height: 230px;
+        #flex-skils .col-flex {
+            min-width: 100px;
         }
 
-        #projects > ul > li {
-            min-width: 100px;
-            min-height: 100px;
-        }
         
         @media (max-width: 576px) { 
-            #avatar {
-                border: 1px solid blue;   
-                width: 100%; 
-                padding: 5px 0;           
-            }
-            #avatar > img {
-                display: block;
-                margin: 0 auto;
-            }
-            #contacts {
-                width: 100%;  
-                border: 1px solid blue;   
-                padding: 5px;
+            #about, .row-flex {
+                justify-content: space-around;
             }
         }
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col" id='avatar'>
+    <div id="about">
+        <div class="col-flex" id='flex-avatar'>
             <img src="avatar.jpg">    
         </div>
-        <div class="col" id="contacts">
+        <div class="col-flex" id="flex-contacts">
             Приветствую Вас. 
             <br>Я Ильнур, инженер-программист.
             <ul>
@@ -121,13 +93,13 @@
                     <a href="https://vk.com/ilnurgi">vk</a>
                 </li>
             </ul>
-        </div>    
+        </div>   
     </div>
-    <div class="row" id='skils'>
+    <div class="row2" id="flex-skils">
         <h2>Умею</h2>
-        <ul>  
-            <li>
-                python
+        <ul class="row-flex">  
+            <li class="col-flex">
+                <h3>python</h3>
                 <ul>
                     <li>django</li>
                     <li>flask</li>
@@ -138,54 +110,54 @@
                     <li>unittest</li>
                 </ul>
             </li>  
-            <li>
-                java script
+            <li class="col-flex">
+                <h3>java script</h3>
                 <ul>
                     <li>angular</li>
-                    <li>extjs 3.4</li>
+                    <li>extjs</li>
                     <li>react</li>
                 </ul>
             </li>        
-            <li>
-                scm
+            <li class="col-flex">
+                <h3>scm</h3>
                 <ul>
                     <li>git</li>
                     <li>mercurial</li>
                 </ul>
             </li>
-            <li>
-                linux
+            <li class="col-flex">
+                <h3>linux</h3>
                 <ul>
                     <li>centos</li>
                     <li>ubuntu</li>
                 </ul>
             </li>
-            <li>
-                sql, nosql
+            <li class="col-flex">
+                <h3>sql, nosql</h3>
                 <ul>
                     <li>mongodb</li>
                     <li>postgres</li>
                 </ul>
             </li>
-            <li>
-                android
+            <li class="col-flex">
+                <h3>android</h3>
                 <ul>
                     kivy
                 </ul>
             </li>
-            <li>
-                html, css
+            <li class="col-flex">
+                <h3>html, css</h3>
                 <ul>
                     <li>bootstrap</li>
                 </ul>
             </li>
         </ul>
     </div>   
-    <div class='row' id="experience">
+    <div class='row2' id="flex-experience">
         <h2>Работал</h2>
-        <ul>
-            <li>
-                2016-... <a href="https://tensor.ru/">Тензор</a><br>инженер-программист
+        <ul class="row-flex">
+            <li class="col-flex">
+                <h3>2016-... <a href="https://tensor.ru/">Тензор</a><br>инженер-программист</h3>
                 <ul>
                     <li>Разработка продуктов компании</li>
                     <li>Документация, тесты, ТЗ, ТД</li>
@@ -194,8 +166,8 @@
                     <li>postgres</li>
                 </ul>
             </li>
-            <li>
-                2016-2016 <a href="https://mera.com/">Мера НН</a><br>инженер-программист
+            <li class="col-flex">
+                <h3>2016-2016 <a href="https://mera.com/">Мера НН</a><br>инженер-программист</h3>
                 <ul>
                     <li>Разработка модулей Openstack</li>
                     <li>Разработка плашинов для Fuel</li>
@@ -208,8 +180,8 @@
                     <li>SQL, MySQL</li>
                 </ul>
             </li>
-            <li>
-                2015-2016 <a href="https://tionix.ru/">ТИОНИКС</a><br>ведущий инженер
+            <li class="col-flex">
+                <h3>2015-2016 <a href="https://tionix.ru/">ТИОНИКС</a><br>ведущий инженер</h3>
                 <ul>
                     <li>Разработка модулей для Openstack</li>
                     <li>Документация, тестирование</li>
@@ -221,8 +193,8 @@
                     <li>MySQL, Mongo</li>
                 </ul>
             </li>
-            <li>
-                2013-2015 <a href="https://bars-open.ru/">БАРС Груп</a><br>web-разработчик
+            <li class="col-flex">
+                <h3>2013-2015 <a href="https://bars-open.ru/">БАРС Груп</a><br>web-разработчик</h3>
                 <ul>
                     <li>Клиент-серверное приложение</li>
                     <li>Документация, тестирование</li>
@@ -235,8 +207,8 @@
                     <li>HTML, CSS, JavaScript, ExtJS</li>
                 </ul>
             </li>
-            <li>
-                2011-2013 <a href="https://www.compressormash.ru/">Казанькомпрессормаш</a><br>инженер-конструктор
+            <li class="col-flex">
+                <h3>2011-2013 <a href="https://www.compressormash.ru/">Казанькомпрессормаш</a><br>инженер-конструктор</h3>
                 <ul>
                     <li>Конструкторская документация</li>
                     <li>2D и 3D чертежи</li>
@@ -247,15 +219,14 @@
             </li>
         </ul>
     </div>
-    <div class='row' id="projects">
+    <div class="row2" id="flex-projects">
         <h2>Проекты</h2>
-        <ul>
-            <li>
-                <a href="/docs/">Конспекты</a>
+        <ul class="row-flex">
+            <li class="col-flex">
+                <h3><a href="/docs/">Конспекты</a></h3>
                 <p>Мои конспекты, <br>справочник по различным IT технологиям, <br>которые я изучаю</p>
             </li>
         </ul>
     </div>
-
 </body>
 </html>
