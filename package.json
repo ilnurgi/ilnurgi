@@ -1,0 +1,28 @@
+{
+  "name": "ilnurgi",
+  "version": "1.0.0",
+  "description": "Моя страничка в интернете",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilnurgi/ilnurgi.git"
+  },
+  "author": "ilnurgi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilnurgi/ilnurgi/issues"
+  },
+  "homepage": "https://github.com/ilnurgi/ilnurgi#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "csso": "^3.5.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1"
+  }
+}

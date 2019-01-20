@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans', Arial, Tahoma;
+}
+
+ul {
+    list-style-type: none;  
+    padding-left: 10px;          
+}
+a:visited,
+a:link
+{
+    color: black;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.col-flex {
+    float: left;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+#flex-skils .col-flex {
+    min-width: 100px;
+}
+
+#flex-skils .col-flex {
+    min-width: 100px;
+}
+
+
+@media (max-width: 576px) { 
+    #about, .row-flex {
+        justify-content: space-around;
+    }
+}
