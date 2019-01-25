@@ -56,8 +56,8 @@ gulp.task('server', function(){
     let browserSyncSerser = browserSync.create();
     browserSyncSerser.init({
         server: {
-            baseDir: './src/'
-        }
+            baseDir: './src/',
+        },
     })
     gulp.watch('./src/**/*').on('change', browserSyncSerser.reload);
 });
