@@ -25,6 +25,8 @@ function clean(done) {
 function copyImages(done){
     gulp.src(params.srcDir+'**/*.jpg')
         .pipe(gulp.dest(params.buildDir));
+    gulp.src(params.srcDir+'**/*.ico')
+        .pipe(gulp.dest(params.buildDir));
     done();
 }
 
