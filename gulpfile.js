@@ -27,6 +27,8 @@ function copyImages(done){
         .pipe(gulp.dest(params.buildDir));
     gulp.src(params.srcDir+'**/*.ico')
         .pipe(gulp.dest(params.buildDir));
+    gulp.src(params.srcDir+'robots.txt')
+        .pipe(gulp.dest(params.buildDir));
     done();
 }
 
